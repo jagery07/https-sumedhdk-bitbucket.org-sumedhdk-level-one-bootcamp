@@ -20,7 +20,7 @@ int main ()
 float one ()
 {
   float h;
-  printf ("Enter x coordinate of point 1 = ");
+  printf ("Enter x coordinate of the point 1 = ");
   scanf ("%f ", &h);
   return h;
 }
@@ -28,21 +28,21 @@ float one ()
 float two ()
 {
   float h;
-  printf ("Enter y coordinate of point 1 = ");
+  printf ("Enter y coordinate of the point 1 = ");
   scanf ("%f", &h);
   return h;
 }
 float three()
 {
    float h;
-   printf("Enter x coordinate of point 2=");
+   printf("Enter x coordinate of the point 2=");
    scanf("%f",&h);
    return h;
 }
 float four();
 {
    float h;
-   printf("Enter y coordinate of point 2=");
+   printf("Enter y coordinate of the point 2=");
    scanf("%f",h);
    return h;
 }
