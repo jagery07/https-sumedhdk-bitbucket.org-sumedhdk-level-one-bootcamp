@@ -1,48 +1,32 @@
 //WAP to find the distance between two point using 4 functions.
 #include<stdio.h>
 #include<math.h>
-int main ()
+float fun1(float x1,float x2)
 {
-  float x1, x2, y1, y2, d;
-  float one ();
-  float two ();
-  float three ();
-  float four ();
-  x1 = one ();
-  y1 = two ();
-  x2 = three ();
-  y2 = four ();
-  d = sqrt (((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
-  printf ("Distance = %f ", d);
-  return 0;
+ return (x2-x1)*(x2-x1);
 }
 
-float one ()
+float fun2(float y1,float y2)
 {
-  float h;
-  printf ("Enter x coordinate of the point 1 = ");
-  scanf ("%f ", &h);
-  return h;
+ return (y2-y1)*(y2-y1); 
+}
+ 
+float dist(float x1,float y1,float x2,float y2)
+{
+ return  sqrt(fun1(x1,x2)+fun2(y1,y2));
 }
 
-float two ()
+float out(float x1,float x2, float y1, float y2)
 {
-  float h;
-  printf ("Enter y coordinate of the point 1 = ");
-  scanf ("%f", &h);
-  return h;
+ printf("Distance between %f %f and %f %f is : %f\n",x1,x2,y1,y2,dist(x1,x2,y1,y2));
 }
-float three()
+
+float main()
 {
-   float h;
-   printf("Enter x coordinate of the point 2=");
-   scanf("%f",&h);
-   return h;
-}
-float four();
-{
-   float h;
-   printf("Enter y coordinate of the point 2=");
-   scanf("%f",h);
-   return h;
+ float x1,y1,x2,y2;
+ printf("Enter coordinate of point 1:\n");
+ scanf("%f%f",&x1,&y1);
+ printf("Enter coordinate of point 2: \n");
+ scanf("%f%f",&x2,&y2);
+ out(x1,y1,x2,y2);
 }
