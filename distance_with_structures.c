@@ -1,23 +1,47 @@
 //WAP to find the distance between two points using structures and 4 functions.#include<stdio.h>
+#include<stdio.h>
 #include<math.h>
-struct point
+struct values
 {
- float x,y;
+    float x1;
+    float y1;
+    float x2;
+    float y2;
 };
+struct values val;
+float input_values();
+double calc_dist();
+float output_values(double b);
 
-float dist(struct point a,struct point b)
+int main(void)
 {
- float d;
- d=sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));
- return d;
+    //struct values val;
+    input_values();
+    calc_dist();
+    return 0;
 }
 
-int main()
+float input_values()
 {
- struct point a,b;
- printf("enter the coordinate of point 1: \n");
- scanf("%f%f",&a.x,&a.y);
- printf("enter the coordinate of point 2: \n");
- scanf("%f%f",&b.x,&b.y);
- printf("distance between points is: %f",dist(a,b));
- }
+    printf("Enter x1: ");
+    scanf("%f",&val.x1);
+    printf("\nEnter y1: ");
+    scanf("%f",&val.y1);
+    printf("\nEnter x2: ");
+    scanf("%f",&val.x2);
+    printf("\nEnter y2: ");
+    scanf("%f",&val.y2);
+}
+
+double calc_dist()
+{
+    double a,b;
+    a=((val.x2-val.x1)(val.x2-val.x1))+((val.y2-val.y1)(val.y2-val.y1));
+    b=sqrt(a);
+    output_values(b);
+}
+
+float output_values(double b)
+{
+    printf("\nDistance between (%f,%f) and (%f,%f) is %lf\n",val.x1,val.y1,val.x2,val.y2,b);
+}
